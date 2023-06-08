@@ -1,0 +1,52 @@
+:root:has(.mode:checked) {
+  --primary-color: #ffff;
+  --secondary-color: #c17e1f;
+  --text-color: #9f9f9f;
+  --bg-color: #252525;
+  --bg2-color: #202020;
+  --white-color: #171717;
+  --selection-color: #c17e1f;
+  --default-color: #ffff;
+}
+:root:has(.mode:checked) .dark-mode .dark {
+  display: none;
+}
+:root:has(.mode:checked) .dark-mode .light {
+  display: block;
+  color: var(--primary-color);
+}
+body:has(.home:target):has(.mode:checked) li a[href="#home"],
+body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"],
+body:has(.gallery:target):has(.mode:checked) li a[href="#gallery"],
+body:has(.contact:target):has(.mode:checked) li a[href="#contact"] {
+  color: var(--primary-color);
+}
+:root:has(.mode:checked) .chefs {
+  background-color: var(--bg2-color);
+}
+:root:has(.mode:checked) .chefs .chefs-cards .chef-card {
+  background-color: var(--white-color);
+}
+:root:has(.mode:checked) .chefs .chefs-cards .chef-card .chef-img::after {
+  background-image: url("../imgs/team-shape-dark.svg");
+}
+:root:has(.mode:checked)
+  .header
+  .header-content
+  .header-title
+  .title-btn
+  .book:hover {
+  background-color: #d78c23;
+}
+:root:has(.mode:checked) .our-gallery .gallery-item .gallery-item-content h3 {
+  color: var(--default-color);
+}
+:root:has(.mode:checked) .contact {
+  background-color: var(--bg2-color);
+}
+.contact form {
+  background-color: var(--white-color);
+}
+:root:has(.mode:checked) .contact .contact-details .detail {
+  background-color: var(--white-color);
+}
